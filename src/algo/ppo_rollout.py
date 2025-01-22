@@ -21,15 +21,18 @@ from stable_baselines3.common.utils import obs_as_tensor, safe_mean
 from stable_baselines3.common.vec_env import VecEnv
 
 from typing import Any, Dict, Optional, Tuple, Type, Union
-
-
+from torch.utils.tensorboard import SummaryWriter
+# summary_writer = SummaryWriter(log_dir='runs4649Unlockold/')
+# summary_writer = SummaryWriter(log_dir='runs314519BlockedUnlockPickupmodelnew/')
+# summary_writer = SummaryWriter(log_dir='test/')
+summary_writer = SummaryWriter(log_dir='runs314519Unlocknew/')
 class PPORollout(BaseAlgorithm):
 
     def __init__(
         self,
         policy: Union[str, Type[ActorCriticPolicy]],
         env: Union[GymEnv, str],
-        run_id: int,
+        run_id: int ,
         learning_rate: Union[float, Schedule],
         n_steps: int,
         batch_size: int,
@@ -633,6 +636,10 @@ class PPORollout(BaseAlgorithm):
 
         callback.on_rollout_start()
         self.init_on_rollout_start()
+        # print(n_rollout_steps)
+        self.success_num=0
+        self.all_num=0
+        
 
         while n_steps < n_rollout_steps:
             
@@ -657,7 +664,15 @@ class PPORollout(BaseAlgorithm):
             self.log_before_transition(values)
 
             # Transition
+            
             new_obs, rewards, dones, infos = env.step(clipped_actions)
+            # print(rewards)
+            #统计dones中的True的个数
+            self.all_num+=np.sum(dones)
+            #统计rewards中大于0的个数
+            # print(rewards)
+            self.success_num+=np.sum(rewards>0)
+            
             if isinstance(new_obs, Dict):
                 new_obs = new_obs["rgb"]
             if self.env_render:
@@ -682,6 +697,7 @@ class PPORollout(BaseAlgorithm):
             self.num_timesteps += self.n_envs
             self._update_info_buffer(infos)
             n_steps += 1
+            
 
             # Add to PPO buffer
             if isinstance(self.action_space, gym.spaces.Discrete):
@@ -770,6 +786,14 @@ class PPORollout(BaseAlgorithm):
                   f'rew: {rew_mean:.6f}  '
                   f'rollout: {collect_end_time - collect_start_time:.3f} sec  '
                   f'train: {train_end_time - train_start_time:.3f} sec')
+            if self.all_num>0:
+                print(f'success_num: {self.success_num}  all_num: {self.all_num}  success_rate: {self.success_num/self.all_num:.6f}')
+                summary_writer.add_scalar('success_rate',self.success_num/self.all_num,self.num_timesteps)
+            else:
+                print(f'success_num: {self.success_num}  all_num: {self.all_num}  success_rate: 0')
+                summary_writer.add_scalar('success_rate',0,self.num_timesteps)
+            
+            
 
         callback.on_training_end()
         return self

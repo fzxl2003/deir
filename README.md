@@ -82,3 +82,379 @@ PYTHONPATH=./ python3 src/train.py \
   --int_rew_coef=3e-2 \
   --rnd_err_norm=0
 ```
+
+
+
+## 新参数训练
+PYTHONPATH=./ python3 src/train.py \
+  --int_rew_source=DEIR \
+  --env_source=minigrid \
+  --game_name=BlockedUnlockPickup \
+  --run_id=42 \
+  --save_model_path=./42BlockedUnlockPickupmodelnew \
+  --features_dim=128 \
+  --learning_rate=0.0004402378806967045 \
+  --batch_size=128 \
+  --n_steps=2048 \
+  --n_epochs=20 \
+  --gamma=0.995 \
+  --vf_coef=0.7225267431531684 \
+  --ent_coef=6.451305148398007e-05 \
+  --max_grad_norm=5 \
+  --clip_range=0.1 \
+
+PYTHONPATH=./ python3 src/train.py \
+  --int_rew_source=DEIR \
+  --env_source=minigrid \
+  --game_name=BlockedUnlockPickup \
+  --run_id=1024 \
+  --save_model_path=./1024BlockedUnlockPickupmodelnew \
+  --features_dim=128 \
+  --learning_rate=0.0004402378806967045 \
+  --batch_size=128 \
+  --n_steps=2048 \
+  --n_epochs=20 \
+  --gamma=0.995 \
+  --vf_coef=0.7225267431531684 \
+  --ent_coef=6.451305148398007e-05 \
+  --max_grad_norm=5 \
+  --clip_range=0.1 \
+
+PYTHONPATH=./ python3 src/train.py \
+  --int_rew_source=DEIR \
+  --env_source=minigrid \
+  --game_name=BlockedUnlockPickup \
+  --run_id=5840 \
+  --save_model_path=./5840BlockedUnlockPickupmodelnew \
+  --features_dim=128 \
+  --learning_rate=0.0004402378806967045 \
+  --batch_size=128 \
+  --n_steps=2048 \
+  --n_epochs=20 \
+  --gamma=0.995 \
+  --vf_coef=0.7225267431531684 \
+  --ent_coef=6.451305148398007e-05 \
+  --max_grad_norm=5 \
+  --clip_range=0.1 \
+
+PYTHONPATH=./ python3 src/train.py \
+  --int_rew_source=DEIR \
+  --env_source=minigrid \
+  --game_name=BlockedUnlockPickup \
+  --run_id=4649 \
+  --save_model_path=./4649BlockedUnlockPickupmodelnew \
+  --features_dim=128 \
+  --learning_rate=0.0004402378806967045 \
+  --batch_size=128 \
+  --n_steps=2048 \
+  --n_epochs=20 \
+  --gamma=0.995 \
+  --vf_coef=0.7225267431531684 \
+  --ent_coef=6.451305148398007e-05 \
+  --max_grad_norm=5 \
+  --clip_range=0.1 \
+
+
+
+PYTHONPATH=./ python3 src/train.py \
+  --int_rew_source=DEIR \
+  --env_source=minigrid \
+  --game_name=BlockedUnlockPickup \
+  --run_id=314519 \
+  --save_model_path=./314519BlockedUnlockPickupmodelnew \
+  --features_dim=128 \
+  --learning_rate=0.0004402378806967045 \
+  --batch_size=128 \
+  --n_steps=2048 \
+  --n_epochs=20 \
+  --gamma=0.995 \
+  --vf_coef=0.7225267431531684 \
+  --ent_coef=6.451305148398007e-05 \
+  --max_grad_norm=5 \
+  --clip_range=0.1 \
+
+#################### unlock
+
+PYTHONPATH=./ python3 src/train.py \
+  --int_rew_source=DEIR \
+  --env_source=minigrid \
+  --game_name=Unlock \
+  --run_id=42 \
+  --save_model_path=./42Unlockmodelnew \
+  --features_dim=128 \
+  --learning_rate=0.0004402378806967045 \
+  --batch_size=128 \
+  --n_steps=2048 \
+  --n_epochs=20 \
+  --gamma=0.995 \
+  --vf_coef=0.7225267431531684 \
+  --ent_coef=6.451305148398007e-05 \
+  --max_grad_norm=5 \
+  --clip_range=0.1 \
+
+PYTHONPATH=./ python3 src/train.py \
+  --int_rew_source=DEIR \
+  --env_source=minigrid \
+  --game_name=Unlock \
+  --run_id=1024 \
+  --save_model_path=./1024Unlockmodelnew \
+  --features_dim=128 \
+  --learning_rate=0.0004402378806967045 \
+  --batch_size=128 \
+  --n_steps=2048 \
+  --n_epochs=20 \
+  --gamma=0.995 \
+  --vf_coef=0.7225267431531684 \
+  --ent_coef=6.451305148398007e-05 \
+  --max_grad_norm=5 \
+  --clip_range=0.1 \
+
+PYTHONPATH=./ python3 src/train.py \
+  --int_rew_source=DEIR \
+  --env_source=minigrid \
+  --game_name=Unlock \
+  --run_id=5840\
+  --save_model_path=./5840Unlockmodelnew \
+  --features_dim=128 \
+  --learning_rate=0.0004402378806967045 \
+  --batch_size=128 \
+  --n_steps=2048 \
+  --n_epochs=20 \
+  --gamma=0.995 \
+  --vf_coef=0.7225267431531684 \
+  --ent_coef=6.451305148398007e-05 \
+  --max_grad_norm=5 \
+  --clip_range=0.1 \
+
+
+PYTHONPATH=./ python3 src/train.py \
+  --int_rew_source=DEIR \
+  --env_source=minigrid \
+  --game_name=Unlock \
+  --run_id=4649\
+  --save_model_path=./4649Unlockmodelnew \
+  --features_dim=128 \
+  --learning_rate=0.0004402378806967045 \
+  --batch_size=128 \
+  --n_steps=2048 \
+  --n_epochs=20 \
+  --gamma=0.995 \
+  --vf_coef=0.7225267431531684 \
+  --ent_coef=6.451305148398007e-05 \
+  --max_grad_norm=5 \
+  --clip_range=0.1 \
+
+PYTHONPATH=./ python3 src/train.py \
+  --int_rew_source=DEIR \
+  --env_source=minigrid \
+  --game_name=Unlock \
+  --run_id=314519\
+  --save_model_path=./314519Unlockmodelnew \
+  --features_dim=128 \
+  --learning_rate=0.0004402378806967045 \
+  --batch_size=128 \
+  --n_steps=2048 \
+  --n_epochs=20 \
+  --gamma=0.995 \
+  --vf_coef=0.7225267431531684 \
+  --ent_coef=6.451305148398007e-05 \
+  --max_grad_norm=5 \
+  --clip_range=0.1 \
+
+## 还需要改激活函数tanh  /root/project/deir/src/algo/ppo_model.py
+## 需要手动调整tensorboard的路径 /root/project/deir/src/algo/ppo_rollout.py
+
+
+
+
+
+
+
+## 旧参数训练
+
+1024
+PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigrid   --game_name=BlockedUnlockPickup \
+--run_id=1024 \
+--save_model_path=./1024BlockedUnlockPickupmodelold \
+--features_dim=64 \
+--learning_rate=3e-4 \
+--batch_size=512 \
+--n_steps=512 \
+--n_epochs=4 \
+--gamma=0.99 \
+--vf_coef=0.5 \
+--ent_coef=0.01 \
+--max_grad_norm=0.5 \
+--clip_range=0.2 \
+
+
+
+PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigrid   --game_name=BlockedUnlockPickup \
+--run_id=314159 \
+--save_model_path=./314159BlockedUnlockPickupmodelold \
+--features_dim=64 \
+--learning_rate=3e-4 \
+--batch_size=512 \
+--n_steps=512 \
+--n_epochs=4 \
+--gamma=0.99 \
+--vf_coef=0.5 \
+--ent_coef=0.01 \
+--max_grad_norm=0.5 \
+--clip_range=0.2 \
+
+PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigrid   --game_name=BlockedUnlockPickup \
+--run_id=4649 \
+--save_model_path=./4649BlockedUnlockPickupmodelold \
+--features_dim=64 \
+--learning_rate=3e-4 \
+--batch_size=512 \
+--n_steps=512 \
+--n_epochs=4 \
+--gamma=0.99 \
+--vf_coef=0.5 \
+--ent_coef=0.01 \
+--max_grad_norm=0.5 \
+--clip_range=0.2 \
+
+PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigrid   --game_name=BlockedUnlockPickup \
+--run_id=5840 \
+--save_model_path=./5840BlockedUnlockPickupmodelold \
+--features_dim=64 \
+--learning_rate=3e-4 \
+--batch_size=512 \
+--n_steps=512 \
+--n_epochs=4 \
+--gamma=0.99 \
+--vf_coef=0.5 \
+--ent_coef=0.01 \
+--max_grad_norm=0.5 \
+--clip_range=0.2 \
+
+PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigrid   --game_name=BlockedUnlockPickup \
+--run_id=42 \
+--save_model_path=./42BlockedUnlockPickupmodelold \
+--features_dim=64 \
+--learning_rate=3e-4 \
+--batch_size=512 \
+--n_steps=512 \
+--n_epochs=4 \
+--gamma=0.99 \
+--vf_coef=0.5 \
+--ent_coef=0.01 \
+--max_grad_norm=0.5 \
+--clip_range=0.2 \
+
+
+## 还需要改激活函数relu  /root/project/deir/src/algo/ppo_model.py
+## 需要手动调整tensorboard的路径 /root/project/deir/src/algo/ppo_rollout.py
+
+#################### unlock
+
+PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigrid   --game_name=Unlock \
+--run_id=42 \
+--save_model_path=./42Unlockold \
+--features_dim=64 \
+--learning_rate=3e-4 \
+--batch_size=512 \
+--n_steps=512 \
+--n_epochs=4 \
+--gamma=0.99 \
+--vf_coef=0.5 \
+--ent_coef=0.01 \
+--max_grad_norm=0.5 \
+--clip_range=0.2 \
+
+
+PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigrid   --game_name=Unlock \
+--run_id=1024 \
+--save_model_path=./1024Unlockold \
+--features_dim=64 \
+--learning_rate=3e-4 \
+--batch_size=512 \
+--n_steps=512 \
+--n_epochs=4 \
+--gamma=0.99 \
+--vf_coef=0.5 \
+--ent_coef=0.01 \
+--max_grad_norm=0.5 \
+--clip_range=0.2 \
+
+PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigrid   --game_name=Unlock \
+--run_id=5840 \
+--save_model_path=./5840Unlockold \
+--features_dim=64 \
+--learning_rate=3e-4 \
+--batch_size=512 \
+--n_steps=512 \
+--n_epochs=4 \
+--gamma=0.99 \
+--vf_coef=0.5 \
+--ent_coef=0.01 \
+--max_grad_norm=0.5 \
+--clip_range=0.2 \
+
+PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigrid   --game_name=Unlock \
+--run_id=4649 \
+--save_model_path=./4649Unlockold \
+--features_dim=64 \
+--learning_rate=3e-4 \
+--batch_size=512 \
+--n_steps=512 \
+--n_epochs=4 \
+--gamma=0.99 \
+--vf_coef=0.5 \
+--ent_coef=0.01 \
+--max_grad_norm=0.5 \
+--clip_range=0.2 \
+
+PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigrid   --game_name=Unlock \
+--run_id=314519 \
+--save_model_path=./314519Unlockold \
+--features_dim=64 \
+--learning_rate=3e-4 \
+--batch_size=512 \
+--n_steps=512 \
+--n_epochs=4 \
+--gamma=0.99 \
+--vf_coef=0.5 \
+--ent_coef=0.01 \
+--max_grad_norm=0.5 \
+--clip_range=0.2 \
+
+
+
+
+
+
+PYTHONPATH=./ python3 src/test.py   --int_rew_source=DEIR   --env_source=minigrid   --game_name=BlockedUnlockPickup \
+--run_id=1024 \
+--load_model_path=./1024BlockedUnlockPickupmodelold \
+--features_dim=64 \
+--learning_rate=3e-4 \
+--batch_size=512 \
+--n_steps=512 \
+--n_epochs=4 \
+--gamma=0.99 \
+--vf_coef=0.5 \
+--ent_coef=0.01 \
+--max_grad_norm=0.5 \
+--clip_range=0.2 \
+
+PYTHONPATH=./ python3 src/test.py   --int_rew_source=DEIR   --env_source=minigrid   --game_name=Unlock \
+--run_id=314519 \
+--load_model_path=./314519Unlockold \
+--features_dim=64 \
+--learning_rate=3e-4 \
+--batch_size=512 \
+--n_steps=512 \
+--n_epochs=4 \
+--gamma=0.99 \
+--vf_coef=0.5 \
+--ent_coef=0.01 \
+--max_grad_norm=0.5 \
+--clip_range=0.2 \
+
+
+## 还需要改激活函数relu  /root/project/deir/src/algo/ppo_model.py
+## 需要手动调整tensorboard的路径 /root/project/deir/src/algo/ppo_rollout.py

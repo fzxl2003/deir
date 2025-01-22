@@ -168,6 +168,7 @@ class CustomKeyCorridor(RoomGrid):
         self.mission = "pick up the %s %s" % (obj.color, obj.type)
 
     def step(self, action):
+        print(action)
         obs, reward, done, info = super().step(action)
 
         if action == self.actions.pickup:
@@ -1114,3 +1115,17 @@ register(
     id="MiniGrid-ObstructedMaze-Full-V3-v0",
     entry_point="src.env.minigrid_envs:ObstructedMaze_Full_V3"
 )
+
+
+# from minigrid.envs import BlockedUnlockPickupEnv
+# register(
+#     id='MiniGrid-BlockedUnlockPickup-v0',
+#     entry_point='gym_minigrid.envs:BlockedUnlockPickupEnv'
+# )
+
+#Unlock
+# from minigrid.envs import UnlockEnv
+# register(
+#     id='MiniGrid-Unlock-v0',
+#     entry_point='gym_minigrid.envs:UnlockEnv'
+# )

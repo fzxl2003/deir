@@ -115,26 +115,36 @@ def train(config):
 
     if config.run_id == 0:
         print('model.policy:', model.policy)
+    
+    
+    model.save(config.save_model_path)
 
     model.learn(
         total_timesteps=config.total_steps,
         callback=callbacks)
+    #save
+    model.save(config.save_model_path)
 
 
 @click.command()
 # Training params
-@click.option('--run_id', default=0, type=int, help='Index (and seed) of the current run')
+@click.option('--run_id', default=1024, type=int, help='Index (and seed) of the current run')
 @click.option('--group_name', type=str, help='Group name (wandb option), leave blank if not logging with wandb')
 @click.option('--log_dir', default='./logs', type=str, help='Directory for saving training logs')
 @click.option('--total_steps', default=int(1e6), type=int, help='Total number of frames to run for training')
-@click.option('--features_dim', default=64, type=int, help='Number of neurons of a learned embedding (PPO)')
+# @click.option('--features_dim', default=64, type=int, help='Number of neurons of a learned embedding (PPO)')
+@click.option('--features_dim', default=128, type=int, help='Number of neurons of a learned embedding (PPO)')
+
 @click.option('--model_features_dim', default=128, type=int,
               help='Number of neurons of a learned embedding (dynamics model)')
-@click.option('--learning_rate', default=3e-4, type=float, help='Learning rate of PPO')
+# @click.option('--learning_rate', default=3e-4, type=float, help='Learning rate of PPO')
+@click.option('--learning_rate', default=0.0004402378806967045, type=float, help='Learning rate of PPO')
 @click.option('--model_learning_rate', default=3e-4, type=float, help='Learning rate of the dynamics model')
 @click.option('--num_processes', default=16, type=int, help='Number of training processes (workers)')
-@click.option('--batch_size', default=512, type=int, help='Batch size')
-@click.option('--n_steps', default=512, type=int, help='Number of steps to run for each process per update')
+# @click.option('--batch_size', default=512, type=int, help='Batch size')
+@click.option('--batch_size', default=128, type=int, help='Batch size')
+# @click.option('--n_steps', default=512, type=int, help='Number of steps to run for each process per update')
+@click.option('--n_steps', default=2048, type=int, help='Number of steps to run for each process per update')
 # Env params
 @click.option('--env_source', default='minigrid', type=str, help='minigrid or procgen')
 @click.option('--game_name', default="DoorKey-8x8", type=str, help='e.g. DoorKey-8x8, ninja, jumper')
@@ -148,15 +158,21 @@ def train(config):
 @click.option('--log_explored_states', default=0, type=int, help='Whether to log the number of explored states')
 @click.option('--fixed_seed', default=-1, type=int, help='Whether to use a fixed env seed (MiniGrid)')
 # Algo params
-@click.option('--n_epochs', default=4, type=int, help='Number of epochs to train policy and value nets')
+# @click.option('--n_epochs', default=4, type=int, help='Number of epochs to train policy and value nets')
+@click.option('--n_epochs', default=20, type=int, help='Number of epochs to train policy and value nets')
 @click.option('--model_n_epochs', default=4, type=int, help='Number of epochs to train common_models')
-@click.option('--gamma', default=0.99, type=float, help='Discount factor')
+# @click.option('--gamma', default=0.99, type=float, help='Discount factor')
+@click.option('--gamma', default=0.995, type=float, help='Discount factor')
 @click.option('--gae_lambda', default=0.95, type=float, help='GAE lambda')
 @click.option('--pg_coef', default=1.0, type=float, help='Coefficient of policy gradients')
-@click.option('--vf_coef', default=0.5, type=float, help='Coefficient of value function loss')
-@click.option('--ent_coef', default=0.01, type=float, help='Coefficient of policy entropy')
-@click.option('--max_grad_norm', default=0.5, type=float, help='Maximum norm of gradient')
-@click.option('--clip_range', default=0.2, type=float, help='PPO clip range of the policy network')
+# @click.option('--vf_coef', default=0.5, type=float, help='Coefficient of value function loss')
+@click.option('--vf_coef', default=0.7225267431531684, type=float, help='Coefficient of value function loss')
+# @click.option('--ent_coef', default=0.01, type=float, help='Coefficient of policy entropy')
+@click.option('--ent_coef', default=6.451305148398007e-05, type=float, help='Coefficient of policy entropy')
+# @click.option('--max_grad_norm', default=0.5, type=float, help='Maximum norm of gradient')
+@click.option('--max_grad_norm', default=5, type=float, help='Maximum norm of gradient')
+# @click.option('--clip_range', default=0.2, type=float, help='PPO clip range of the policy network')
+@click.option('--clip_range', default=0.1, type=float, help='PPO clip range of the policy network')
 @click.option('--clip_range_vf', default=-1, type=float,
               help='PPO clip range of the value function (-1: disabled, >0: enabled)')
 @click.option('--adv_norm', default=2, type=int,
@@ -225,6 +241,7 @@ def train(config):
 @click.option('--env_render', default=0, type=int, help='Whether to render games in human mode')
 @click.option('--use_status_predictor', default=0, type=int,
               help='Whether to train status predictors for analysis (MiniGrid only)')
+@click.option('--save_model_path', default='./1024BlockedUnlockPickupmodel', type=str, help='Directory for saving model')
 def main(
     run_id, group_name, log_dir, total_steps, features_dim, model_features_dim, learning_rate, model_learning_rate,
     num_processes, batch_size, n_steps, env_source, game_name, project_name, map_size, can_see_walls, fully_obs,
@@ -236,9 +253,9 @@ def main(
     policy_cnn_norm, policy_mlp_norm, policy_gru_norm, model_cnn_type, model_mlp_layers, model_cnn_norm, model_mlp_norm,
     model_gru_norm, activation_fn, cnn_activation_fn, gru_layers, optimizer, optim_eps, adam_beta1, adam_beta2,
     rmsprop_alpha, rmsprop_momentum, write_local_logs, enable_plotting, plot_interval, plot_colormap, record_video,
-    rec_interval, video_length, log_dsc_verbose, env_render, use_status_predictor
+    rec_interval, video_length, log_dsc_verbose, env_render, use_status_predictor, save_model_path
 ):
-    set_random_seed(run_id, using_cuda=True)
+    set_random_seed(run_id, using_cuda=True) 
     args = locals().items()
     config = TrainingConfig()
     for k, v in args: setattr(config, k, v)

@@ -330,3 +330,17 @@ class PPOTrainer(PPORollout):
             eval_log_path=eval_log_path,
             reset_num_timesteps=reset_num_timesteps,
         )
+    def save(self, path: str) -> None:
+        #保存self.policy
+        print("Saving model to path: ", path)
+        import joblib
+        joblib.dump(self.policy,path+'.pkl')
+        if self.use_wandb:
+            wandb.save(path)
+    def load(self, path: str,run_id: int) -> None:
+        #仅加载模型，其他参数不变
+        self.run_id = run_id
+        import joblib
+        self.policy = joblib.load(path+'.pkl')
+
+
