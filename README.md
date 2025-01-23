@@ -85,7 +85,7 @@ PYTHONPATH=./ python3 src/train.py \
 
 
 
-## 新参数训练
+######### 新参数训练 42 BlockedUnlockPickup Tanh #########
 PYTHONPATH=./ python3 src/train.py \
   --int_rew_source=DEIR \
   --env_source=minigrid \
@@ -103,6 +103,7 @@ PYTHONPATH=./ python3 src/train.py \
   --max_grad_norm=5 \
   --clip_range=0.1 \
 
+######### 新参数训练 1024 BlockedUnlockPickup Tanh #########
 PYTHONPATH=./ python3 src/train.py \
   --int_rew_source=DEIR \
   --env_source=minigrid \
@@ -120,6 +121,7 @@ PYTHONPATH=./ python3 src/train.py \
   --max_grad_norm=5 \
   --clip_range=0.1 \
 
+######### 新参数训练 5840 BlockedUnlockPickup Tanh #########
 PYTHONPATH=./ python3 src/train.py \
   --int_rew_source=DEIR \
   --env_source=minigrid \
@@ -137,6 +139,7 @@ PYTHONPATH=./ python3 src/train.py \
   --max_grad_norm=5 \
   --clip_range=0.1 \
 
+######### 新参数训练 4649 BlockedUnlockPickup Tanh #########
 PYTHONPATH=./ python3 src/train.py \
   --int_rew_source=DEIR \
   --env_source=minigrid \
@@ -155,7 +158,7 @@ PYTHONPATH=./ python3 src/train.py \
   --clip_range=0.1 \
 
 
-dddd
+######### 新参数训练 314159 BlockedUnlockPickup Tanh #########
 PYTHONPATH=./ python3 src/train.py \
   --int_rew_source=DEIR \
   --env_source=minigrid \
@@ -173,7 +176,7 @@ PYTHONPATH=./ python3 src/train.py \
   --max_grad_norm=5 \
   --clip_range=0.1 \
 
-#################### unlock
+######### 新参数训练 42 Unlock Tanh #########
 
 PYTHONPATH=./ python3 src/train.py \
   --int_rew_source=DEIR \
@@ -191,7 +194,7 @@ PYTHONPATH=./ python3 src/train.py \
   --ent_coef=6.451305148398007e-05 \
   --max_grad_norm=5 \
   --clip_range=0.1 \
-
+######### 新参数训练 1024 Unlock Tanh #########
 PYTHONPATH=./ python3 src/train.py \
   --int_rew_source=DEIR \
   --env_source=minigrid \
@@ -208,7 +211,7 @@ PYTHONPATH=./ python3 src/train.py \
   --ent_coef=6.451305148398007e-05 \
   --max_grad_norm=5 \
   --clip_range=0.1 \
-
+######### 新参数训练 5840 Unlock Tanh #########
 PYTHONPATH=./ python3 src/train.py \
   --int_rew_source=DEIR \
   --env_source=minigrid \
@@ -226,7 +229,7 @@ PYTHONPATH=./ python3 src/train.py \
   --max_grad_norm=5 \
   --clip_range=0.1 \
 
-
+######### 新参数训练 4649 Unlock Tanh #########
 PYTHONPATH=./ python3 src/train.py \
   --int_rew_source=DEIR \
   --env_source=minigrid \
@@ -243,7 +246,7 @@ PYTHONPATH=./ python3 src/train.py \
   --ent_coef=6.451305148398007e-05 \
   --max_grad_norm=5 \
   --clip_range=0.1 \
-dddd
+######### 新参数训练 314159 Unlock Tanh #########
 PYTHONPATH=./ python3 src/train.py \
   --int_rew_source=DEIR \
   --env_source=minigrid \
@@ -272,7 +275,7 @@ PYTHONPATH=./ python3 src/train.py \
 
 ## 旧参数训练
 
-1024
+#################### 旧参数训练 BlockedUnlockPickup Relu 1024 ####################
 PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigrid   --game_name=BlockedUnlockPickup \
 --run_id=1024 \
 --save_model_path=./1024BlockedUnlockPickupmodelold \
@@ -288,7 +291,7 @@ PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigr
 --clip_range=0.2 \
 
 
-
+#################### 旧参数训练 Unlock Relu 314519####################
 PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigrid   --game_name=BlockedUnlockPickup \
 --run_id=314159 \
 --save_model_path=./314159BlockedUnlockPickupmodelold \
@@ -302,7 +305,7 @@ PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigr
 --ent_coef=0.01 \
 --max_grad_norm=0.5 \
 --clip_range=0.2 \
-
+#################### 旧参数训练 BlockedUnlockPickup Relu 4649 ##################
 PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigrid   --game_name=BlockedUnlockPickup \
 --run_id=4649 \
 --save_model_path=./4649BlockedUnlockPickupmodelold \
@@ -316,7 +319,7 @@ PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigr
 --ent_coef=0.01 \
 --max_grad_norm=0.5 \
 --clip_range=0.2 \
-
+#################### 旧参数训练 BlockedUnlockPickup Relu 5840 ##################
 PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigrid   --game_name=BlockedUnlockPickup \
 --run_id=5840 \
 --save_model_path=./5840BlockedUnlockPickupmodelold \
@@ -331,6 +334,7 @@ PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigr
 --max_grad_norm=0.5 \
 --clip_range=0.2 \
 
+#################### 旧参数训练 BlockedUnlockPickup Relu 42 ##################
 PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigrid   --game_name=BlockedUnlockPickup \
 --run_id=42 \
 --save_model_path=./42BlockedUnlockPickupmodelold \
@@ -349,8 +353,7 @@ PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigr
 ## 还需要改激活函数relu  /root/project/deir/src/algo/ppo_model.py
 ## 需要手动调整tensorboard的路径 /root/project/deir/src/algo/ppo_rollout.py
 
-#################### unlock
-
+#################### 旧参数训练 Unlock Relu 42 ##################
 PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigrid   --game_name=Unlock \
 --run_id=42 \
 --save_model_path=./42Unlockold \
@@ -365,7 +368,7 @@ PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigr
 --max_grad_norm=0.5 \
 --clip_range=0.2 \
 
-
+#################### 旧参数训练 Unlock Relu 1024 ##################
 PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigrid   --game_name=Unlock \
 --run_id=1024 \
 --save_model_path=./1024Unlockold \
@@ -379,7 +382,7 @@ PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigr
 --ent_coef=0.01 \
 --max_grad_norm=0.5 \
 --clip_range=0.2 \
-
+#################### 旧参数训练 Unlock Relu 5840 ##################
 PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigrid   --game_name=Unlock \
 --run_id=5840 \
 --save_model_path=./5840Unlockold \
@@ -393,7 +396,7 @@ PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigr
 --ent_coef=0.01 \
 --max_grad_norm=0.5 \
 --clip_range=0.2 \
-
+#################### 旧参数训练 Unlock Relu 4649 ##################
 PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigrid   --game_name=Unlock \
 --run_id=4649 \
 --save_model_path=./4649Unlockold \
@@ -407,7 +410,7 @@ PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigr
 --ent_coef=0.01 \
 --max_grad_norm=0.5 \
 --clip_range=0.2 \
-ddddd
+#################### 旧参数训练 Unlock Relu 314159 ##################
 PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigrid   --game_name=Unlock \
 --run_id=314159 \
 --save_model_path=./314159Unlockold \
@@ -426,10 +429,9 @@ PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigr
 
 
 
-
+######### 旧参数测试 BlockedUnlockPickup Relu 
 PYTHONPATH=./ python3 src/test.py   --int_rew_source=DEIR   --env_source=minigrid   --game_name=BlockedUnlockPickup \
 --run_id=1024 \
---load_model_path=./1024BlockedUnlockPickupmodelold \
 --features_dim=64 \
 --learning_rate=3e-4 \
 --batch_size=512 \
@@ -442,10 +444,9 @@ PYTHONPATH=./ python3 src/test.py   --int_rew_source=DEIR   --env_source=minigri
 --clip_range=0.2 \
 --load_model_path=/root/project/deir/runs/1024BlockedUnlockPickupmodelold
 
-
+######## 旧参数测试 Unlock Relu
 PYTHONPATH=./ python3 src/test.py   --int_rew_source=DEIR   --env_source=minigrid   --game_name=Unlock \
 --run_id=314159 \
---load_model_path=./314159Unlockold \
 --features_dim=64 \
 --learning_rate=3e-4 \
 --batch_size=512 \
@@ -456,8 +457,41 @@ PYTHONPATH=./ python3 src/test.py   --int_rew_source=DEIR   --env_source=minigri
 --ent_coef=0.01 \
 --max_grad_norm=0.5 \
 --clip_range=0.2 \
-
-
+--load_model_path=/root/project/deir/runs/314159Unlockold
+######### 新参数测试 BlockedUnlockPickup Tanh
+PYTHONPATH=./ python3 src/test.py \
+  --int_rew_source=DEIR \
+  --env_source=minigrid \
+  --game_name=BlockedUnlockPickup \
+  --run_id=42 \
+  --features_dim=128 \
+  --learning_rate=0.0004402378806967045 \
+  --batch_size=128 \
+  --n_steps=2048 \
+  --n_epochs=20 \
+  --gamma=0.995 \
+  --vf_coef=0.7225267431531684 \
+  --ent_coef=6.451305148398007e-05 \
+  --max_grad_norm=5 \
+  --clip_range=0.1 \
+  --load_model_path=/root/project/deir/runs/42BlockedUnlockPickupmodelnew
+######### 新参数测试 Unlock Tanh
+PYTHONPATH=./ python3 src/test.py \
+  --int_rew_source=DEIR \
+  --env_source=minigrid \
+  --game_name=Unlock \
+  --run_id=42 \
+  --features_dim=128 \
+  --learning_rate=0.0004402378806967045 \
+  --batch_size=128 \
+  --n_steps=2048 \
+  --n_epochs=20 \
+  --gamma=0.995 \
+  --vf_coef=0.7225267431531684 \
+  --ent_coef=6.451305148398007e-05 \
+  --max_grad_norm=5 \
+  --clip_range=0.1 \
+  --load_model_path=/root/project/deir/runs/42Unlockmodelnew
 ## 还需要改激活函数relu  /root/project/deir/src/algo/ppo_model.py
 ## 需要手动调整tensorboard的路径 /root/project/deir/src/algo/ppo_rollout.py
 
