@@ -128,7 +128,7 @@ def test(config):
 @click.option('--run_id', default=1024, type=int, help='Index (and seed) of the current run')
 @click.option('--group_name', type=str, help='Group name (wandb option), leave blank if not logging with wandb')
 @click.option('--log_dir', default='./logs', type=str, help='Directory for saving training logs')
-@click.option('--total_steps', default=int(1024000), type=int, help='Total number of frames to run for training')
+@click.option('--total_steps', default=int(1024), type=int, help='Total number of frames to run for training')
 # @click.option('--features_dim', default=64, type=int, help='Number of neurons of a learned embedding (PPO)')
 @click.option('--features_dim', default=128, type=int, help='Number of neurons of a learned embedding (PPO)')
 

@@ -24,8 +24,8 @@ from typing import Any, Dict, Optional, Tuple, Type, Union
 from torch.utils.tensorboard import SummaryWriter
 # summary_writer = SummaryWriter(log_dir='runs4649Unlockold/')
 # summary_writer = SummaryWriter(log_dir='runs314519BlockedUnlockPickupmodelnew/')
-# summary_writer = SummaryWriter(log_dir='test/')
-summary_writer = SummaryWriter(log_dir='runs314519Unlocknew/')
+summary_writer = SummaryWriter(log_dir='test/')
+# summary_writer = SummaryWriter(log_dir='runs314159BlockedUnlockPickupmodelold/')
 class PPORollout(BaseAlgorithm):
 
     def __init__(

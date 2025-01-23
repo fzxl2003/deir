@@ -155,13 +155,13 @@ PYTHONPATH=./ python3 src/train.py \
   --clip_range=0.1 \
 
 
-
+dddd
 PYTHONPATH=./ python3 src/train.py \
   --int_rew_source=DEIR \
   --env_source=minigrid \
   --game_name=BlockedUnlockPickup \
-  --run_id=314519 \
-  --save_model_path=./314519BlockedUnlockPickupmodelnew \
+  --run_id=314159 \
+  --save_model_path=./314159BlockedUnlockPickupmodelnew \
   --features_dim=128 \
   --learning_rate=0.0004402378806967045 \
   --batch_size=128 \
@@ -243,13 +243,13 @@ PYTHONPATH=./ python3 src/train.py \
   --ent_coef=6.451305148398007e-05 \
   --max_grad_norm=5 \
   --clip_range=0.1 \
-
+dddd
 PYTHONPATH=./ python3 src/train.py \
   --int_rew_source=DEIR \
   --env_source=minigrid \
   --game_name=Unlock \
-  --run_id=314519\
-  --save_model_path=./314519Unlockmodelnew \
+  --run_id=314159\
+  --save_model_path=./314159Unlockmodelnew \
   --features_dim=128 \
   --learning_rate=0.0004402378806967045 \
   --batch_size=128 \
@@ -407,10 +407,10 @@ PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigr
 --ent_coef=0.01 \
 --max_grad_norm=0.5 \
 --clip_range=0.2 \
-
+ddddd
 PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigrid   --game_name=Unlock \
---run_id=314519 \
---save_model_path=./314519Unlockold \
+--run_id=314159 \
+--save_model_path=./314159Unlockold \
 --features_dim=64 \
 --learning_rate=3e-4 \
 --batch_size=512 \
@@ -440,10 +440,12 @@ PYTHONPATH=./ python3 src/test.py   --int_rew_source=DEIR   --env_source=minigri
 --ent_coef=0.01 \
 --max_grad_norm=0.5 \
 --clip_range=0.2 \
+--load_model_path=/root/project/deir/runs/1024BlockedUnlockPickupmodelold
+
 
 PYTHONPATH=./ python3 src/test.py   --int_rew_source=DEIR   --env_source=minigrid   --game_name=Unlock \
---run_id=314519 \
---load_model_path=./314519Unlockold \
+--run_id=314159 \
+--load_model_path=./314159Unlockold \
 --features_dim=64 \
 --learning_rate=3e-4 \
 --batch_size=512 \
@@ -458,3 +460,30 @@ PYTHONPATH=./ python3 src/test.py   --int_rew_source=DEIR   --env_source=minigri
 
 ## 还需要改激活函数relu  /root/project/deir/src/algo/ppo_model.py
 ## 需要手动调整tensorboard的路径 /root/project/deir/src/algo/ppo_rollout.py
+
+
+
+Unlock 新参数
+42：0.96
+1024：0.91
+5840：1
+4649：0.98
+314159：0.91
+
+Unlock 旧参数
+均为1
+
+
+BlockedUnlockPickup 新参数
+42:0
+1024:0
+5840:0
+4649:0
+314159:0
+
+BlockedUnlockPickup 旧参数
+42:0
+1024:1
+5840:0
+4649:0
+314159:1
