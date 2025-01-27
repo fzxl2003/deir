@@ -176,6 +176,42 @@ PYTHONPATH=./ python3 src/train.py \
   --max_grad_norm=5 \
   --clip_range=0.1 \
 
+######### 新参数训练 2986 BlockedUnlockPickup Tanh #########
+PYTHONPATH=./ python3 src/train.py \
+  --int_rew_source=DEIR \
+  --env_source=minigrid \
+  --game_name=BlockedUnlockPickup \
+  --run_id=2986 \
+  --save_model_path=./2986BlockedUnlockPickupmodelnew \
+  --features_dim=128 \
+  --learning_rate=0.0004402378806967045 \
+  --batch_size=128 \
+  --n_steps=2048 \
+  --n_epochs=20 \
+  --gamma=0.995 \
+  --vf_coef=0.7225267431531684 \
+  --ent_coef=6.451305148398007e-05 \
+  --max_grad_norm=5 \
+  --clip_range=0.1 \
+
+
+######### 新参数测试BlockedUnlockPickup xxx  tanh ########
+PYTHONPATH=./ python3 src/test.py   --int_rew_source=DEIR   --env_source=minigrid   --game_name=BlockedUnlockPickup \
+--run_id=1024 \
+--features_dim=64 \
+--learning_rate=3e-4 \
+--batch_size=512 \
+--n_steps=512 \
+--n_epochs=4 \
+--gamma=0.99 \
+--vf_coef=0.5 \
+--ent_coef=0.01 \
+--max_grad_norm=0.5 \
+--clip_range=0.2 \
+--load_model_path=/root/project/deir/runs/1024BlockedUnlockPickupmodelold
+
+
+
 ######### 新参数训练 42 Unlock Tanh #########
 
 PYTHONPATH=./ python3 src/train.py \
@@ -185,15 +221,15 @@ PYTHONPATH=./ python3 src/train.py \
   --run_id=42 \
   --save_model_path=./42Unlockmodelnew \
   --features_dim=128 \
-  --learning_rate=0.0004402378806967045 \
-  --batch_size=128 \
+  --learning_rate=0.0004993915310303568 \
+  --batch_size=64 \
   --n_steps=2048 \
   --n_epochs=20 \
-  --gamma=0.995 \
-  --vf_coef=0.7225267431531684 \
-  --ent_coef=6.451305148398007e-05 \
-  --max_grad_norm=5 \
-  --clip_range=0.1 \
+  --gamma=0.95 \
+  --vf_coef=0.9234622679465284 \
+  --ent_coef=5.368707796294674e-05 \
+  --max_grad_norm=0.8 \
+  --clip_range=0.3 \
 ######### 新参数训练 1024 Unlock Tanh #########
 PYTHONPATH=./ python3 src/train.py \
   --int_rew_source=DEIR \
@@ -202,15 +238,15 @@ PYTHONPATH=./ python3 src/train.py \
   --run_id=1024 \
   --save_model_path=./1024Unlockmodelnew \
   --features_dim=128 \
-  --learning_rate=0.0004402378806967045 \
-  --batch_size=128 \
+  --learning_rate=0.0004993915310303568 \
+  --batch_size=64 \
   --n_steps=2048 \
   --n_epochs=20 \
-  --gamma=0.995 \
-  --vf_coef=0.7225267431531684 \
-  --ent_coef=6.451305148398007e-05 \
-  --max_grad_norm=5 \
-  --clip_range=0.1 \
+  --gamma=0.95 \
+  --vf_coef=0.9234622679465284 \
+  --ent_coef=5.368707796294674e-05 \
+  --max_grad_norm=0.8 \
+  --clip_range=0.3 \
 ######### 新参数训练 5840 Unlock Tanh #########
 PYTHONPATH=./ python3 src/train.py \
   --int_rew_source=DEIR \
@@ -219,15 +255,15 @@ PYTHONPATH=./ python3 src/train.py \
   --run_id=5840\
   --save_model_path=./5840Unlockmodelnew \
   --features_dim=128 \
-  --learning_rate=0.0004402378806967045 \
-  --batch_size=128 \
+  --learning_rate=0.0004993915310303568 \
+  --batch_size=64 \
   --n_steps=2048 \
   --n_epochs=20 \
-  --gamma=0.995 \
-  --vf_coef=0.7225267431531684 \
-  --ent_coef=6.451305148398007e-05 \
-  --max_grad_norm=5 \
-  --clip_range=0.1 \
+  --gamma=0.95 \
+  --vf_coef=0.9234622679465284 \
+  --ent_coef=5.368707796294674e-05 \
+  --max_grad_norm=0.8 \
+  --clip_range=0.3 \
 
 ######### 新参数训练 4649 Unlock Tanh #########
 PYTHONPATH=./ python3 src/train.py \
@@ -237,15 +273,15 @@ PYTHONPATH=./ python3 src/train.py \
   --run_id=4649\
   --save_model_path=./4649Unlockmodelnew \
   --features_dim=128 \
-  --learning_rate=0.0004402378806967045 \
-  --batch_size=128 \
+  --learning_rate=0.0004993915310303568 \
+  --batch_size=64 \
   --n_steps=2048 \
   --n_epochs=20 \
-  --gamma=0.995 \
-  --vf_coef=0.7225267431531684 \
-  --ent_coef=6.451305148398007e-05 \
-  --max_grad_norm=5 \
-  --clip_range=0.1 \
+  --gamma=0.95 \
+  --vf_coef=0.9234622679465284 \
+  --ent_coef=5.368707796294674e-05 \
+  --max_grad_norm=0.8 \
+  --clip_range=0.3 \
 ######### 新参数训练 314159 Unlock Tanh #########
 PYTHONPATH=./ python3 src/train.py \
   --int_rew_source=DEIR \
@@ -254,15 +290,268 @@ PYTHONPATH=./ python3 src/train.py \
   --run_id=314159\
   --save_model_path=./314159Unlockmodelnew \
   --features_dim=128 \
-  --learning_rate=0.0004402378806967045 \
-  --batch_size=128 \
+  --learning_rate=0.0004993915310303568 \
+  --batch_size=64 \
   --n_steps=2048 \
   --n_epochs=20 \
-  --gamma=0.995 \
-  --vf_coef=0.7225267431531684 \
-  --ent_coef=6.451305148398007e-05 \
-  --max_grad_norm=5 \
+  --gamma=0.95 \
+  --vf_coef=0.9234622679465284 \
+  --ent_coef=5.368707796294674e-05 \
+  --max_grad_norm=0.8 \
+  --clip_range=0.3 \
+
+######### 新参数训练 2986 Unlock Tanh #########
+PYTHONPATH=./ python3 src/train.py \
+  --int_rew_source=DEIR \
+  --env_source=minigrid \
+  --game_name=Unlock \
+  --run_id=2986\
+  --save_model_path=./2986Unlockmodelnew \
+  --features_dim=128 \
+  --learning_rate=0.0004993915310303568 \
+  --batch_size=64 \
+  --n_steps=2048 \
+  --n_epochs=20 \
+  --gamma=0.95 \
+  --vf_coef=0.9234622679465284 \
+  --ent_coef=5.368707796294674e-05 \
+  --max_grad_norm=0.8 \
+  --clip_range=0.3 \
+
+######### 新参数测试Unlock xxx  tanh ########
+PYTHONPATH=./ python3 src/test.py   --int_rew_source=DEIR   --env_source=minigrid   --game_name=Unlock \
+--run_id=1024 \
+--features_dim=128 \
+--learning_rate=0.0004993915310303568 \
+--batch_size=64 \
+--n_steps=2048 \
+--n_epochs=20 \
+--gamma=0.95 \
+--vf_coef=0.9234622679465284 \
+--ent_coef=5.368707796294674e-05 \
+--max_grad_norm=0.8 \
+--clip_range=0.3 \
+--load_model_path=/root/project/deir/runs/1024BlockedUnlockPickupmodelold
+
+########## 新参数训练UnlockPickup 42  relu ######## 
+
+PYTHONPATH=./ python3 src/train.py \
+  --int_rew_source=DEIR \
+  --env_source=minigrid \
+  --game_name=UnlockPickup \
+  --run_id=42\
+  --save_model_path=./42UnlockPickupmodelnew \
+  --features_dim=128 \
+  --learning_rate=0.0011085443668731837 \
+  --batch_size=256 \
+  --n_steps=2048 \
+  --n_epochs=10 \
+  --gamma=0.9 \
+  --vf_coef=0.423967217641348 \
+  --ent_coef=2.5176363253597164e-08 \
+  --max_grad_norm=0.6 \
   --clip_range=0.1 \
+
+########## 新参数训练UnlockPickup 1024  relu ######## 
+
+PYTHONPATH=./ python3 src/train.py \
+  --int_rew_source=DEIR \
+  --env_source=minigrid \
+  --game_name=UnlockPickup \
+  --run_id=1024\
+  --save_model_path=./1024UnlockPickupmodelnew \
+  --features_dim=128 \
+  --learning_rate=0.0011085443668731837 \
+  --batch_size=256 \
+  --n_steps=2048 \
+  --n_epochs=10 \
+  --gamma=0.9 \
+  --vf_coef=0.423967217641348 \
+  --ent_coef=2.5176363253597164e-08 \
+  --max_grad_norm=0.6 \
+  --clip_range=0.1 \
+########## 新参数训练UnlockPickup 5840  relu ######## 
+
+PYTHONPATH=./ python3 src/train.py \
+  --int_rew_source=DEIR \
+  --env_source=minigrid \
+  --game_name=UnlockPickup \
+  --run_id=5840\
+  --save_model_path=./5840UnlockPickupmodelnew \
+  --features_dim=128 \
+  --learning_rate=0.0011085443668731837 \
+  --batch_size=256 \
+  --n_steps=2048 \
+  --n_epochs=10 \
+  --gamma=0.9 \
+  --vf_coef=0.423967217641348 \
+  --ent_coef=2.5176363253597164e-08 \
+  --max_grad_norm=0.6 \
+  --clip_range=0.1 \
+########## 新参数训练UnlockPickup 4649  relu ######## 
+
+PYTHONPATH=./ python3 src/train.py \
+  --int_rew_source=DEIR \
+  --env_source=minigrid \
+  --game_name=UnlockPickup \
+  --run_id=4649\
+  --save_model_path=./4649UnlockPickupmodelnew \
+  --features_dim=128 \
+  --learning_rate=0.0011085443668731837 \
+  --batch_size=256 \
+  --n_steps=2048 \
+  --n_epochs=10 \
+  --gamma=0.9 \
+  --vf_coef=0.423967217641348 \
+  --ent_coef=2.5176363253597164e-08 \
+  --max_grad_norm=0.6 \
+  --clip_range=0.1 \
+
+########## 新参数训练UnlockPickup 314159  relu ######## 
+
+PYTHONPATH=./ python3 src/train.py \
+  --int_rew_source=DEIR \
+  --env_source=minigrid \
+  --game_name=UnlockPickup \
+  --run_id=314159\
+  --save_model_path=./314159UnlockPickupmodelnew \
+  --features_dim=128 \
+  --learning_rate=0.0011085443668731837 \
+  --batch_size=256 \
+  --n_steps=2048 \
+  --n_epochs=10 \
+  --gamma=0.9 \
+  --vf_coef=0.423967217641348 \
+  --ent_coef=2.5176363253597164e-08 \
+  --max_grad_norm=0.6 \
+  --clip_range=0.1 \
+
+########## 新参数训练UnlockPickup 2986  relu ######## 
+
+PYTHONPATH=./ python3 src/train.py \
+  --int_rew_source=DEIR \
+  --env_source=minigrid \
+  --game_name=UnlockPickup \
+  --run_id=2986\
+  --save_model_path=./2986UnlockPickupmodelnew \
+  --features_dim=128 \
+  --learning_rate=0.0011085443668731837 \
+  --batch_size=256 \
+  --n_steps=2048 \
+  --n_epochs=10 \
+  --gamma=0.9 \
+  --vf_coef=0.423967217641348 \
+  --ent_coef=2.5176363253597164e-08 \
+  --max_grad_norm=0.6 \
+  --clip_range=0.1 \
+
+########## 新参数测试UnlockPickup xxxx  relu ########
+PYTHONPATH=./ python3 src/test.py   --int_rew_source=DEIR   --env_source=minigrid   --game_name=UnlockPickup \
+--run_id=1024 \
+--features_dim=128 \
+--learning_rate=0.0011085443668731837 \
+--batch_size=256 \
+--n_steps=2048 \
+--n_epochs=10 \
+--gamma=0.9 \
+--vf_coef=0.423967217641348 \
+--ent_coef=2.5176363253597164e-08 \
+--max_grad_norm=0.6 \
+--clip_range=0.1 \
+--load_model_path=/root/project/deir/runs/1024BlockedUnlockPickupmodelold
+
+
+
+
+#################### 新参数训练 RedBlueDoor tanh 42 ################## 
+PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigrid   --game_name=MiniGrid-RedBlueDoors-8x8-v0 \
+--run_id=42 \
+--save_model_path=./42RedBlueDoornew \
+--features_dim=128 \
+--learning_rate=0.0006600625492645438 \
+--batch_size=256 \
+--n_steps=2048 \
+--n_epochs=10 \
+--gamma=0.9 \
+--vf_coef=0.8991719073875422 \
+--ent_coef=5.3841020764888015e-08 \
+--max_grad_norm=1 \
+--clip_range=0.1 \
+
+#################### 新参数训练 RedBlueDoor tanh 1024 ################## 
+PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigrid   --game_name=MiniGrid-RedBlueDoors-8x8-v0 \
+--run_id=1024 \
+--save_model_path=./1024RedBlueDoornew \
+--features_dim=128 \
+--learning_rate=0.0006600625492645438 \
+--batch_size=256 \
+--n_steps=2048 \
+--n_epochs=10 \
+--gamma=0.9 \
+--vf_coef=0.8991719073875422 \
+--ent_coef=5.3841020764888015e-08 \
+--max_grad_norm=1 \
+--clip_range=0.1 \
+
+#################### 新参数训练 RedBlueDoor tanh 5840 ################## 
+PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigrid   --game_name=MiniGrid-RedBlueDoors-8x8-v0 \
+--run_id=5840 \
+--save_model_path=./5840RedBlueDoornew \
+--features_dim=128 \
+--learning_rate=0.0006600625492645438 \
+--batch_size=256 \
+--n_steps=2048 \
+--n_epochs=10 \
+--gamma=0.9 \
+--vf_coef=0.8991719073875422 \
+--ent_coef=5.3841020764888015e-08 \
+--max_grad_norm=1 \
+--clip_range=0.1 \
+
+#################### 新参数训练 RedBlueDoor tanh 4649 ################## 
+PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigrid   --game_name=MiniGrid-RedBlueDoors-8x8-v0 \
+--run_id=4649 \
+--save_model_path=./4649RedBlueDoornew \
+--features_dim=128 \
+--learning_rate=0.0006600625492645438 \
+--batch_size=256 \
+--n_steps=2048 \
+--n_epochs=10 \
+--gamma=0.9 \
+--vf_coef=0.8991719073875422 \
+--ent_coef=5.3841020764888015e-08 \
+--max_grad_norm=1 \
+--clip_range=0.1 \
+
+#################### 新参数训练 RedBlueDoor tanh 314159 ################## 
+PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigrid   --game_name=MiniGrid-RedBlueDoors-8x8-v0 \
+--run_id=314159 \
+--save_model_path=./314159RedBlueDoornew \
+--features_dim=128 \
+--learning_rate=0.0006600625492645438 \
+--batch_size=256 \
+--n_steps=2048 \
+--n_epochs=10 \
+--gamma=0.9 \
+--vf_coef=0.8991719073875422 \
+--ent_coef=5.3841020764888015e-08 \
+--max_grad_norm=1 \
+--clip_range=0.1 \
+
+#################### 新参数训练 RedBlueDoor tanh 2986 ################## 
+PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigrid   --game_name=MiniGrid-RedBlueDoors-8x8-v0 \
+--run_id=2986 \
+--save_model_path=./2986RedBlueDoornew \
+--features_dim=128 \
+--learning_rate=0.0006600625492645438 \
+--batch_size=256 \
+--n_steps=2048 \
+--n_epochs=10 \
+--gamma=0.9 \
+--vf_coef=0.8991719073875422 \
+--ent_coef=5.3841020764888015e-08 \
+--max_grad_norm=1 \
+--clip_range=0.1 \
 
 ## 还需要改激活函数tanh  /root/project/deir/src/algo/ppo_model.py
 ## 需要手动调整tensorboard的路径 /root/project/deir/src/algo/ppo_rollout.py
@@ -291,7 +580,7 @@ PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigr
 --clip_range=0.2 \
 
 
-#################### 旧参数训练 Unlock Relu 314519####################
+#################### 旧参数训练BlockUnlockPickup relu 314519####################
 PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigrid   --game_name=BlockedUnlockPickup \
 --run_id=314159 \
 --save_model_path=./314159BlockedUnlockPickupmodelold \
@@ -348,6 +637,37 @@ PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigr
 --ent_coef=0.01 \
 --max_grad_norm=0.5 \
 --clip_range=0.2 \
+
+#################### 旧参数训练 BlockedUnlockPickup Relu 2986 ##################
+PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigrid   --game_name=BlockedUnlockPickup \
+--run_id=2986 \
+--save_model_path=./2986BlockedUnlockPickupmodelold \
+--features_dim=64 \
+--learning_rate=3e-4 \
+--batch_size=512 \
+--n_steps=512 \
+--n_epochs=4 \
+--gamma=0.99 \
+--vf_coef=0.5 \
+--ent_coef=0.01 \
+--max_grad_norm=0.5 \
+--clip_range=0.2 \
+
+#################### 旧参数测试 BlockedUnlockPickup Relu ##################
+PYTHONPATH=./ python3 src/test.py   --int_rew_source=DEIR   --env_source=minigrid   --game_name=BlockedUnlockPickup \
+--run_id=1024 \
+--features_dim=64 \
+--learning_rate=3e-4 \
+--batch_size=512 \
+--n_steps=512 \
+--n_epochs=4 \
+--gamma=0.99 \
+--vf_coef=0.5 \
+--ent_coef=0.01 \
+--max_grad_norm=0.5 \
+--clip_range=0.2 \
+--load_model_path=/root/project/deir/runs/1024BlockedUnlockPickupmodelold
+
 
 
 ## 还需要改激活函数relu  /root/project/deir/src/algo/ppo_model.py
@@ -424,13 +744,23 @@ PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigr
 --ent_coef=0.01 \
 --max_grad_norm=0.5 \
 --clip_range=0.2 \
+#################### 旧参数训练 Unlock Relu 2986 ##################
+PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigrid   --game_name=Unlock \
+--run_id=2986 \
+--save_model_path=./2986Unlockold \
+--features_dim=64 \
+--learning_rate=3e-4 \
+--batch_size=512 \
+--n_steps=512 \
+--n_epochs=4 \
+--gamma=0.99 \
+--vf_coef=0.5 \
+--ent_coef=0.01 \
+--max_grad_norm=0.5 \
+--clip_range=0.2 \
 
-
-
-
-
-######### 旧参数测试 BlockedUnlockPickup Relu 
-PYTHONPATH=./ python3 src/test.py   --int_rew_source=DEIR   --env_source=minigrid   --game_name=BlockedUnlockPickup \
+########## 旧参数测试Unlock Relu ##################
+PYTHONPATH=./ python3 src/test.py   --int_rew_source=DEIR   --env_source=minigrid   --game_name=Unlock \
 --run_id=1024 \
 --features_dim=64 \
 --learning_rate=3e-4 \
@@ -444,9 +774,10 @@ PYTHONPATH=./ python3 src/test.py   --int_rew_source=DEIR   --env_source=minigri
 --clip_range=0.2 \
 --load_model_path=/root/project/deir/runs/1024BlockedUnlockPickupmodelold
 
-######## 旧参数测试 Unlock Relu
-PYTHONPATH=./ python3 src/test.py   --int_rew_source=DEIR   --env_source=minigrid   --game_name=Unlock \
---run_id=314159 \
+#################### 旧参数训练 UnlockPickup Relu 42 ################## 
+PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigrid   --game_name=UnlockPickup \
+--run_id=42 \
+--save_model_path=./42UnlockPickupold \
 --features_dim=64 \
 --learning_rate=3e-4 \
 --batch_size=512 \
@@ -457,44 +788,187 @@ PYTHONPATH=./ python3 src/test.py   --int_rew_source=DEIR   --env_source=minigri
 --ent_coef=0.01 \
 --max_grad_norm=0.5 \
 --clip_range=0.2 \
---load_model_path=/root/project/deir/runs/314159Unlockold
-######### 新参数测试 BlockedUnlockPickup Tanh
-PYTHONPATH=./ python3 src/test.py \
-  --int_rew_source=DEIR \
-  --env_source=minigrid \
-  --game_name=BlockedUnlockPickup \
-  --run_id=42 \
-  --features_dim=128 \
-  --learning_rate=0.0004402378806967045 \
-  --batch_size=128 \
-  --n_steps=2048 \
-  --n_epochs=20 \
-  --gamma=0.995 \
-  --vf_coef=0.7225267431531684 \
-  --ent_coef=6.451305148398007e-05 \
-  --max_grad_norm=5 \
-  --clip_range=0.1 \
-  --load_model_path=/root/project/deir/runs/42BlockedUnlockPickupmodelnew
-######### 新参数测试 Unlock Tanh
-PYTHONPATH=./ python3 src/test.py \
-  --int_rew_source=DEIR \
-  --env_source=minigrid \
-  --game_name=Unlock \
-  --run_id=42 \
-  --features_dim=128 \
-  --learning_rate=0.0004402378806967045 \
-  --batch_size=128 \
-  --n_steps=2048 \
-  --n_epochs=20 \
-  --gamma=0.995 \
-  --vf_coef=0.7225267431531684 \
-  --ent_coef=6.451305148398007e-05 \
-  --max_grad_norm=5 \
-  --clip_range=0.1 \
-  --load_model_path=/root/project/deir/runs/42Unlockmodelnew
-## 还需要改激活函数relu  /root/project/deir/src/algo/ppo_model.py
-## 需要手动调整tensorboard的路径 /root/project/deir/src/algo/ppo_rollout.py
 
+#################### 旧参数训练 UnlockPickup Relu 1024 ################## 
+PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigrid   --game_name=UnlockPickup \
+--run_id=1024 \
+--save_model_path=./1024UnlockPickupold \
+--features_dim=64 \
+--learning_rate=3e-4 \
+--batch_size=512 \
+--n_steps=512 \
+--n_epochs=4 \
+--gamma=0.99 \
+--vf_coef=0.5 \
+--ent_coef=0.01 \
+--max_grad_norm=0.5 \
+--clip_range=0.2 \
+
+#################### 旧参数训练 UnlockPickup Relu 5840 ################## 
+PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigrid   --game_name=UnlockPickup \
+--run_id=5840 \
+--save_model_path=./5840UnlockPickupold \
+--features_dim=64 \
+--learning_rate=3e-4 \
+--batch_size=512 \
+--n_steps=512 \
+--n_epochs=4 \
+--gamma=0.99 \
+--vf_coef=0.5 \
+--ent_coef=0.01 \
+--max_grad_norm=0.5 \
+--clip_range=0.2 \
+
+#################### 旧参数训练 UnlockPickup Relu 4649 ################## 
+PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigrid   --game_name=UnlockPickup \
+--run_id=4649 \
+--save_model_path=./4649UnlockPickupold \
+--features_dim=64 \
+--learning_rate=3e-4 \
+--batch_size=512 \
+--n_steps=512 \
+--n_epochs=4 \
+--gamma=0.99 \
+--vf_coef=0.5 \
+--ent_coef=0.01 \
+--max_grad_norm=0.5 \
+--clip_range=0.2 \
+#################### 旧参数训练 UnlockPickup Relu 314159 ################## 
+PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigrid   --game_name=UnlockPickup \
+--run_id=314159 \
+--save_model_path=./314159UnlockPickupold \
+--features_dim=64 \
+--learning_rate=3e-4 \
+--batch_size=512 \
+--n_steps=512 \
+--n_epochs=4 \
+--gamma=0.99 \
+--vf_coef=0.5 \
+--ent_coef=0.01 \
+--max_grad_norm=0.5 \
+--clip_range=0.2 \
+
+#################### 旧参数训练 UnlockPickup Relu 2986 ################## 
+PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigrid   --game_name=UnlockPickup \
+--run_id=2986 \
+--save_model_path=./2986UnlockPickupold \
+--features_dim=64 \
+--learning_rate=3e-4 \
+--batch_size=512 \
+--n_steps=512 \
+--n_epochs=4 \
+--gamma=0.99 \
+--vf_coef=0.5 \
+--ent_coef=0.01 \
+--max_grad_norm=0.5 \
+--clip_range=0.2 \
+
+######### 旧参数测试 UnlockPickup Relu 
+PYTHONPATH=./ python3 src/test.py   --int_rew_source=DEIR   --env_source=minigrid   --game_name=UnlockPickup \
+--run_id=1024 \
+--features_dim=64 \
+--learning_rate=3e-4 \
+--batch_size=512 \
+--n_steps=512 \
+--n_epochs=4 \
+--gamma=0.99 \
+--vf_coef=0.5 \
+--ent_coef=0.01 \
+--max_grad_norm=0.5 \
+--clip_range=0.2 \
+--load_model_path=/root/project/deir/runs/1024BlockedUnlockPickupmodelold
+
+
+
+
+#################### 旧参数训练 RedBlueDoor relu 42 ##################
+PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigrid   --game_name=MiniGrid-RedBlueDoors-8x8-v0 \
+--run_id=42 \
+--save_model_path=./42RedBlueDoorold \
+--features_dim=64 \
+--learning_rate=3e-4 \
+--batch_size=512 \
+--n_steps=512 \
+--n_epochs=4 \
+--gamma=0.99 \
+--vf_coef=0.5 \
+--ent_coef=0.01 \
+--max_grad_norm=0.5 \
+--clip_range=0.2 \
+#################### 旧参数训练 RedBlueDoor relu 1024 ##################
+PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigrid   --game_name=MiniGrid-RedBlueDoors-8x8-v0 \
+--run_id=1024 \
+--save_model_path=./1024RedBlueDoorold \
+--features_dim=64 \
+--learning_rate=3e-4 \
+--batch_size=512 \
+--n_steps=512 \
+--n_epochs=4 \
+--gamma=0.99 \
+--vf_coef=0.5 \
+--ent_coef=0.01 \
+--max_grad_norm=0.5 \
+--clip_range=0.2 \
+
+#################### 旧参数训练 RedBlueDoor relu 5840 ##################
+PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigrid   --game_name=MiniGrid-RedBlueDoors-8x8-v0 \
+--run_id=5840 \
+--save_model_path=./5840RedBlueDoorold \
+--features_dim=64 \
+--learning_rate=3e-4 \
+--batch_size=512 \
+--n_steps=512 \
+--n_epochs=4 \
+--gamma=0.99 \
+--vf_coef=0.5 \
+--ent_coef=0.01 \
+--max_grad_norm=0.5 \
+--clip_range=0.2 \
+
+#################### 旧参数训练 RedBlueDoor relu 4649 ##################
+PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigrid   --game_name=MiniGrid-RedBlueDoors-8x8-v0 \
+--run_id=4649 \
+--save_model_path=./4649RedBlueDoorold \
+--features_dim=64 \
+--learning_rate=3e-4 \
+--batch_size=512 \
+--n_steps=512 \
+--n_epochs=4 \
+--gamma=0.99 \
+--vf_coef=0.5 \
+--ent_coef=0.01 \
+--max_grad_norm=0.5 \
+--clip_range=0.2 \
+
+#################### 旧参数训练 RedBlueDoor relu 314159 ##################
+PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigrid   --game_name=MiniGrid-RedBlueDoors-8x8-v0 \
+--run_id=314159 \
+--save_model_path=./314159RedBlueDoorold \
+--features_dim=64 \
+--learning_rate=3e-4 \
+--batch_size=512 \
+--n_steps=512 \
+--n_epochs=4 \
+--gamma=0.99 \
+--vf_coef=0.5 \
+--ent_coef=0.01 \
+--max_grad_norm=0.5 \
+--clip_range=0.2 \
+
+#################### 旧参数训练 RedBlueDoor relu 2986 ##################
+PYTHONPATH=./ python3 src/train.py   --int_rew_source=DEIR   --env_source=minigrid   --game_name=MiniGrid-RedBlueDoors-8x8-v0 \
+--run_id=2986 \
+--save_model_path=./2986RedBlueDoorold \
+--features_dim=64 \
+--learning_rate=3e-4 \
+--batch_size=512 \
+--n_steps=512 \
+--n_epochs=4 \
+--gamma=0.99 \
+--vf_coef=0.5 \
+--ent_coef=0.01 \
+--max_grad_norm=0.5 \
+--clip_range=0.2 \
 
 
 Unlock 新参数
@@ -503,6 +977,7 @@ Unlock 新参数
 5840：1
 4649：0.98
 314159：0.91
+2986
 
 Unlock 旧参数
 均为1
@@ -514,6 +989,7 @@ BlockedUnlockPickup 新参数
 5840:0
 4649:0
 314159:0
+2986
 
 BlockedUnlockPickup 旧参数
 42:0
@@ -521,3 +997,37 @@ BlockedUnlockPickup 旧参数
 5840:0
 4649:0
 314159:1
+2986
+
+
+UnlockPickup 新参数
+42:0.89
+1024:0.91
+5840:0.86
+4649:0.979
+314159:0.99
+2986
+
+UnlockPickup 旧参数
+42:1
+1024:1
+5840:1
+4649:1
+314159:1
+2986
+
+RedBlueDoor 新参数
+42:
+1024:
+5840:
+4649:
+314159:
+2986:
+
+RedBlueDoor 旧参数
+42:
+1024:
+5840:
+4649:
+314159:
+2986:

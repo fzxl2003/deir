@@ -22,9 +22,10 @@ from stable_baselines3.common.vec_env import VecEnv
 
 from typing import Any, Dict, Optional, Tuple, Type, Union
 from torch.utils.tensorboard import SummaryWriter
-# summary_writer = SummaryWriter(log_dir='runs4649Unlockold/')
-# summary_writer = SummaryWriter(log_dir='runs314519BlockedUnlockPickupmodelnew/')
-summary_writer = SummaryWriter(log_dir='test/')
+# summary_writer = SummaryWriter(log_dir='runs42Unlocknew/')
+# summary_writer = SummaryWriter(log_dir='runs314159UnlockPickupmodelold/')
+summary_writer = SummaryWriter(log_dir='runs2986UnlockPickupold/')
+# summary_writer = SummaryWriter(log_dir='test/')
 # summary_writer = SummaryWriter(log_dir='runs314159BlockedUnlockPickupmodelold/')
 class PPORollout(BaseAlgorithm):
 
